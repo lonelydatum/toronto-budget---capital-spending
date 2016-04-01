@@ -8,18 +8,17 @@ if (process.env.BROWSER) {
 class comp extends Component {
 	constructor(){
 		super()
-		this.state = {counter:0}
 	}
 
-	onClicked(){
-		this.setState({counter:this.state.counter+1})
+	onClicked(){		
+		this.props.up()
 	}
 
 	render() {
 		return (
 			<div className="counter">
-				<h1>{this.state.counter}</h1>
-				<button onClick={this.onClicked.bind(this)}>Increase Counter++</button>
+				<h1>{this.props.counter}</h1>
+				<button onClick={this.onClicked.bind(this)}>Increase Counter+</button>
 			</div>
 		);
 	}

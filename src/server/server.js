@@ -3,7 +3,7 @@ import express from 'express'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
 var path = require('path');
-import Comp from '../common/commponents/Counter.js'
+import Comp from '../common/components/Counter.js'
 
 const app = express()
 

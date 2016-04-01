@@ -1,13 +1,16 @@
 import 'babel-polyfill'
 import React from 'react'
 import { render } from 'react-dom'
-import Comp from '../common/commponents/Counter.js'
+import { Provider } from 'react-redux'
 
+import configureStore from '../common/store/configureStore'
+import App from '../common/containers/App'
 
-const rootElement = document.getElementById('app')
+const store = configureStore({counter:77})
 
 render(
-  <Comp/>,
-  rootElement
+  <Provider store={store}>
+    <App/>
+  </Provider>,
+  document.getElementById('app')
 )
-
