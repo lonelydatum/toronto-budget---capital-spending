@@ -1,0 +1,32 @@
+@import "../../../../../node_modules/breakpoint-sass/stylesheets/_breakpoint.scss";
+@import '../../common.scss';
+
+#content .years{
+	margin: 1em 0em;	
+}
+
+
+#content .years .title{
+
+}
+
+#content .years .list{
+	display: flex;
+	flex-wrap: wrap;	
+	@include breakpoint( $screen-large) {
+		justify-content: space-between;
+	}
+
+	div.name.btn{
+		margin: .1em;
+		flex: 0 0 36px;
+
+		@include breakpoint( $screen-large) {
+			margin: 0;
+		}
+
+
+	}
+
+
+}

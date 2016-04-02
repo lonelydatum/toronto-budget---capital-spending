@@ -4,10 +4,10 @@ import Counter from '../components/Counter'
 import * as CounterActions from '../actions'
 // import {increment, decrement} from '../actions'
 
-function mapStateToProps(state) {	
-  return {
-    counter: state.counter
-  }
+function mapStateToProps(state) {
+	return {
+		counter: state.counter
+	}
 }
 
 function mapDispatchToProps(dispatch) {
@@ -19,7 +19,7 @@ function mapDispatchToProps(dispatch) {
 	// 		dispatch( decrement() )
 	// 	}
 	// }
-  return bindActionCreators(CounterActions, dispatch)
+	return bindActionCreators(CounterActions, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter)

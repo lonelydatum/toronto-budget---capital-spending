@@ -1,0 +1,50 @@
+@import '../common.scss';
+
+.chart {
+	// font-weight: 300;	
+	padding: 0em 2em;
+	// border: 1px solid green;
+	background-color: rgba(255,255,255,.1);
+	padding-bottom: .6em;
+	padding-top: 1em;
+
+	margin-bottom: 2em;
+
+}
+.chart .chart-years{	
+	// border: 1px solid red;
+	margin-top: .6em;
+
+}
+.chart .year{
+	margin-bottom: 3px;
+	display: flex;
+	opacity: .5;
+	transition: .1s;
+	font-weight: 400;
+}
+
+.chart .year.selected{
+	opacity: 1;
+}
+
+.chart .year .label{
+	font-size: .7em;
+	margin-right: 5px;
+	// color:white;
+}
+
+.chart .year .bar{
+	background-color: white;
+	height: 1px;
+	align-self: center;
+}
+
+
+.chart .description{
+	max-width: 380px;
+	// font-weight: 300;
+	font-size: .9em;
+	padding-bottom: 0em;
+	line-height: 1.3em;
+}

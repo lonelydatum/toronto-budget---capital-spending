@@ -1,0 +1,24 @@
+@import "../../../node_modules/breakpoint-sass/stylesheets/_breakpoint.scss";
+@import '../common.scss';
+
+
+
+#hud{
+	display: flex;
+	background-color: $color-bg;	
+	justify-content: flex-start;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	transform: translate(1126px, 143px) rotate(-17deg);
+}
+
+#hud .grand-total{
+	width: 666px;
+	padding: .25em 1em;
+	font-size: 2em;
+	font-weight: 300;	
+	background-color: black;
+	text-align: center;
+	
+}

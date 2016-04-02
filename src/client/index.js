@@ -2,15 +2,31 @@ import 'babel-polyfill'
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import todoApp from '../common/reducers'
+import App from '../common/components/App'
+import {getRawData} from '../common/actions'
 
-import configureStore from '../common/store/configureStore'
-import App from '../common/containers/App'
+// import './helpers/convertBudget'
 
-const store = configureStore({counter:1})
+
+
+import '../common/util/Numbers'
+
+
+
+
+
+let store = createStore(todoApp)
+const state = store.getState()
+store.dispatch( getRawData(state.sortBy, state.years) )
 
 render(
   <Provider store={store}>
-    <App/>
+    <App />
   </Provider>,
-  document.getElementById('app')
+  document.getElementById('root')
 )
+
+
+

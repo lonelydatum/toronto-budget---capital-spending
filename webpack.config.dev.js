@@ -32,6 +32,12 @@ module.exports = {
         exclude: /node_modules/,
         include: __dirname        
       },
+      {
+        test: /\.json$/,
+        loaders: [ 'json' ],
+        exclude: /node_modules/,
+        include: __dirname
+      },  
       { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
       {
         test: /\.scss$/,
@@ -40,4 +46,29 @@ module.exports = {
     ]
   }
 }
+
+
+
+// loaders: [
+//       {
+//         test: /\.js$/,
+//         loaders: [ 'babel' ],
+//         exclude: /node_modules/,
+//         include: __dirname
+//       },
+//       {
+//         test: /\.json$/,
+//         loaders: [ 'json' ],
+//         exclude: /node_modules/,
+//         include: __dirname
+//       },      
+//       { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
+//       {
+//         test: /\.scss$/,
+//         loaders: ["style", "css", "sass?sourceMap"]
+//       }
+//     ]
+
+
+
 
