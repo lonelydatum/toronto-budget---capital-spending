@@ -80,7 +80,7 @@ export class Intro extends Component {
 						
 						<div className="social">
 							<div className="social-item twitter">
-								<a href="https://twitter.com/share" className="real twitter-share-button" data-text="A Visualization of Toronto's Capital Budget (2014-2023). #TOpoli #CityofTO #Toronto" data-via="lonelydatum">									
+								<a href="https://twitter.com/share" className="real twitter-share-button" data-text="Visualization of Toronto's Capital Budget, 2014-2023 #TOpoli #Toronto" data-via="lonelydatum">									
 									
 								</a>			
 								{twitterImage}
@@ -103,7 +103,7 @@ export class Intro extends Component {
 								Dataset: <a onClick={this.onClickDataset} href="http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=7daf4d8e69770310VgnVCM1000003dd60f89RCRD" target="_blank">Toronto.ca</a>
 							</p>
 							<p>
-								Github: <a href="https://github.com/lonelydatum/toronto-budget---capital-spending">Fork this project</a>
+								Github: <a href="https://github.com/lonelydatum/toronto-budget---capital-spending" target="_blank">Fork this project</a>
 							</p>
 						</div>
 					</footer>

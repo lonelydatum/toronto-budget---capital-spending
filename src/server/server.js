@@ -50,11 +50,13 @@ function renderFullPage(html, initialState) {
  <head>
     <title>Toronto Capital Budget</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="keywords" content="Visualization, Toronto Capital Budget, lonelydatum, Gar Liu">
+    <meta name="description" content="A visualization of Toronto's Capital Budget. Explore by projects within wards from 2014-2023.">
     <meta property="og:url"           content="http://toronto-capital-budget.lonelydatum.com" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="A visualization of Toronto's Capital Budget" />
     <meta property="og:description"   content="A visualization of Toronto's Capital Budget" />
-    <meta property="og:image"         content="http://toronto-capital-budget.lonelydatum.com/toronto-capital-budget.png" />
+    <meta property="og:image"         content="http://toronto-capital-budget.lonelydatum.com/toronto-capital-budget-700x400.png" />
   
   <style>    
     body{
