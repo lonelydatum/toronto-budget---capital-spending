@@ -80,7 +80,7 @@ export class Intro extends Component {
 						
 						<div className="social">
 							<div className="social-item twitter">
-								<a href="https://twitter.com/share" className="real twitter-share-button" data-text="Visualization of Toronto's Capital Budget. #sldfjk" data-via="lonelydatum">									
+								<a href="https://twitter.com/share" className="real twitter-share-button" data-text="A Visualization of Toronto's Capital Budget (2014-2023). #TOpoli #CityofTO #Toronto" data-via="lonelydatum">									
 									
 								</a>			
 								{twitterImage}

@@ -14,7 +14,7 @@ app.use(webpackHotMiddleware(compiler))
 
 
 app.get("/", function(req, res) {
-  res.sendfile(path.join(__dirname, 'dev.html'));
+  res.sendFile(path.join(__dirname, 'dev.html'));
 })
 
 app.listen(port, function(error) {
