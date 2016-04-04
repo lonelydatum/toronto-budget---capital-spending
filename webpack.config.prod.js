@@ -3,19 +3,22 @@ var webpack = require('webpack')
 
 
 module.exports = {
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   entry: [ './src/client/index.js' ],
   output: {
     path: path.join(__dirname, './src/dist'),
     filename: 'bundle.js',
     publicPath: '/static/'
   },
+  externals: {
+      "react": "React"
+  },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),    
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('production'),
-        'BROWSER': JSON.stringify('true')
+        BROWSER: JSON.stringify(true)
       }
     }),
     new webpack.optimize.UglifyJsPlugin({

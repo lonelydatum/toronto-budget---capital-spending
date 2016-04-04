@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
 import classnames from 'classnames'
 import ShowHide from '../common/ShowHide'
-// import twitterImage from './social-twitter.svg'
-// import fbImage from './social-fb.svg'
+
 import {Analytics} from '../../util/GA.js'
+
+let twitterImage;
+let fbImage;
 
 if (process.env.BROWSER) {
 	require('./intro.scss')
+	const tw = require('./social-twitter.png')
+	const fb = require('./social-fb.png')
+	twitterImage = (<img src={tw} />);
+	fbImage = (<img src={fb}/>);
+	// import twitterImage from './social-twitter.png'
+	// import fbImage from './social-fb.png'
 }
 
 export class Intro extends Component {
@@ -72,26 +80,30 @@ export class Intro extends Component {
 						
 						<div className="social">
 							<div className="social-item twitter">
-								<a href="https://twitter.com/share" className="real twitter-share-button" data-text="A visualization of Toronto's Capital Budget spending" data-via="lonelydatum">									
+								<a href="https://twitter.com/share" className="real twitter-share-button" data-text="Visualization of Toronto's Capital Budget. #sldfjk" data-via="lonelydatum">									
 									
 								</a>			
-								<img />					
+								{twitterImage}
 							</div>
 							<div className="social-item fb">
 								<div className="real fb-share-button" 
 								    data-href="http://toronto-capital-budget.lonelydatum.com" 
 								    data-layout="button">
 								</div>
-								<img />								
+								{fbImage}				
 							</div>
 						</div>
 
 						<div>
 							<p className="by">
-								Made by: Gar Liu of <a onClick={this.onClickBy} href="http://lonelydatum.com">Lonely Datum</a>							
+								Contact: <a href="mailto:gar@lonelydatum.com">Gar Liu</a>
 							</p>
+							
 							<p>
 								Dataset: <a onClick={this.onClickDataset} href="http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=7daf4d8e69770310VgnVCM1000003dd60f89RCRD" target="_blank">Toronto.ca</a>
+							</p>
+							<p>
+								Github: <a href="https://github.com/lonelydatum/toronto-budget---capital-spending">Fork this project</a>
 							</p>
 						</div>
 					</footer>

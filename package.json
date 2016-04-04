@@ -8,8 +8,8 @@
     "react-redux": "^4.4.1"
   },
   "scripts": {
-    "start": "node src/server/index.js",
-    "bundle": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
+    "start": "node src/server/index.js",    
+    "bundle:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "dev": "node src/dev/index.js",
     "server": "node src/server/index.js"
   },

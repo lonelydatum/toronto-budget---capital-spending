@@ -10,6 +10,7 @@ import showHideAll from './showHideAll'
 import intro from './Intro'
 
 const rootReducer = combineReducers({
+	intro,
 	counter,
 	showHideAll,
 	sortBy,

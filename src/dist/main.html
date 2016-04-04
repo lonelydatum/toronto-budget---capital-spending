@@ -1,15 +1,42 @@
 <!doctype html>
 <html>
-<head>
-  <intercept-url pattern="/favicon.ico" access="ROLE_ANONYMOUS" />
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,800' rel='stylesheet' type='text/css'>
-  <script src='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'></script>
-  <link href='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css' rel='stylesheet' />
-  <title>Redux Universal Example</title>
-</head>
+ <head>
+    <title>Toronto Capital Budget</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta property="og:url"           content="http://toronto-capital-budget.lonelydatum.com" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="A visualization of Toronto's Capital Budget" />
+    <meta property="og:description"   content="A visualization of Toronto's Capital Budget" />
+    <meta property="og:image"         content="http://toronto-capital-budget.lonelydatum.com/toronto-capital-budget.png" />
+  
+  <style>    
+    body{
+      opacity: 0;
+    }
+  </style>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,800' rel='stylesheet' type='text/css'>
+    <script src='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css' rel='stylesheet' />    
+  </head>
 <body>
-  <div id="root"></div>
+  <!-- <div id="fb-root"></div> -->
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=223656951010357";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 
+  
+  
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+
+  <div id="root"></div>
 
   <!-- Google Analytics -->
   <script>
@@ -22,8 +49,9 @@
     ga('send', 'pageview');
   </script>
   <!-- End Google Analytics -->
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.15.0-alpha.1/react.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TimelineMax.min.js"></script>
 <script src="./bundle.js"></script>
 </body>
 </html>

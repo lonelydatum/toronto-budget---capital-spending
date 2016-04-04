@@ -23,10 +23,10 @@ const mapStateToProps = (state)=>{
 	let showIntro = false
 
 
-	// if(state.intro.closeCount===1 && introOnce){
-	// 	showIntro = true;
-	// 	introOnce = false;
-	// }
+	if(state.intro.closeCount===1 && introOnce){
+		showIntro = true;
+		introOnce = false;
+	}
 
 	
 	
