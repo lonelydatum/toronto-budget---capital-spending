@@ -101,6 +101,7 @@ function renderFullPage(html, initialState) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.15.0-alpha.1/react.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TimelineMax.min.js"></script>
+<script src="./budget_data_min.js"></script>
 <script src="./bundle.js"></script>
 
 <script>

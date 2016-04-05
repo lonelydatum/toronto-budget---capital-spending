@@ -1,54 +1,62 @@
-export const SET_COUNTER = 'SET_COUNTER'
-export const INCREMENT_COUNTER = 'INCREMENT_COUNTER'
-export const DECREMENT_COUNTER = 'DECREMENT_COUNTER'
+// export const SET_COUNTER = 'SET_COUNTER'
+// export const INCREMENT_COUNTER = 'INCREMENT_COUNTER'
+// export const DECREMENT_COUNTER = 'DECREMENT_COUNTER'
 
-export function set(value) {
-  return {
-    type: SET_COUNTER,
-    payload: value
-  }
-}
+// export function set(value) {
+//   return {
+//     type: SET_COUNTER,
+//     payload: value
+//   }
+// }
 
-export function increment() {
-  return {
-    type: INCREMENT_COUNTER
-  }
-}
+// export function increment() {
+//   return {
+//     type: INCREMENT_COUNTER
+//   }
+// }
 
-export function decrement() {
-  return {
-    type: DECREMENT_COUNTER
-  }
-}
+// export function decrement() {
+//   return {
+//     type: DECREMENT_COUNTER
+//   }
+// }
 
-export function incrementIfOdd() {
-  return (dispatch, getState) => {
-    const { counter } = getState()
+// export function incrementIfOdd() {
+//   return (dispatch, getState) => {
+//     const { counter } = getState()
 
-    if (counter % 2 === 0) {
-      return
-    }
+//     if (counter % 2 === 0) {
+//       return
+//     }
 
-    dispatch(increment())
-  }
-}
+//     dispatch(increment())
+//   }
+// }
 
-export function incrementAsync(delay = 1000) {
-  return dispatch => {
-    setTimeout(() => {
-      dispatch(increment())
-    }, delay)
-  }
-}
-
-
+// export function incrementAsync(delay = 1000) {
+//   return dispatch => {
+//     setTimeout(() => {
+//       dispatch(increment())
+//     }, delay)
+//   }
+// }
 
 
 
 
 
-import data from '../data/budget_clean.json'
+
+
+// import data from '../data/budget_clean.json'
+
 import * as type from '../constants/ActionTypes'
+
+let data = []
+if (process.env.BROWSER) {
+  data = budget_data  
+}
+
+
 
 export function getRawData(sortyBy, years) {
   return {
