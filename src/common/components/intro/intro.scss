@@ -4,7 +4,12 @@
 
 #intro{
 	$time: 1s;
+	position: relative;
+	z-index: 3000;
 	
+
+	width: 100%;
+	height: 100%;
 	
 	&.open{		
 		
@@ -20,14 +25,17 @@
 		}
 	}
 
-	&.close{
+	&.close{		
+		-webkit-transition: height $time;
+		-webkit-transition-delay: $time;
+		height: 0%;
 		.content-opened{			
 			transform: scale(0);
-			opacity: 0;
-			z-index: 3000;
-			position: absolute;
-			width: 100%;
-			height: 100%;			
+			opacity: 1;
+			// z-index: 3000;
+			// position: absolute;
+			// width: 100%;
+			// height: 100%;			
 		}
 		.content-closed{
 			
@@ -70,7 +78,7 @@
 			text-align: center;
 			margin-top: .7em;
 			max-width: 500px;
-			padding: 0em .5em;
+			padding: 0em .9em;
 			line-height: 1.5em;
 			font-size: 1.2em;
 			font-weight: 300;
@@ -149,7 +157,7 @@
 		
 
 		.social > div{			
-			margin-right: 1em;
+			// margin-right: 1em;
 		}
 
 		.social img{

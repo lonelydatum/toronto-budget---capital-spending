@@ -1,6 +1,12 @@
+@import "../../../../node_modules/breakpoint-sass/stylesheets/_breakpoint.scss";
 @import '../common.scss';
 
-#content{}
+#content{
+	padding-top: 2em;
+	@include breakpoint( $screen-large) {
+		padding-top: 1em;
+	}
+}
 
 
 
