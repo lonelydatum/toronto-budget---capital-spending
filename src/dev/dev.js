@@ -12,7 +12,7 @@ var compiler = webpack(config)
 app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }))
 app.use(webpackHotMiddleware(compiler))
 
-app.use(express.static(path.join(__dirname, '../dist')));
+// app.use(express.static(path.join(__dirname, '../dist')));
 
 
 app.get("/", function(req, res) {
