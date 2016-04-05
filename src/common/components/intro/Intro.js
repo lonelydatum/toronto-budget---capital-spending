@@ -39,8 +39,12 @@ export class Intro extends Component {
 		Analytics('intro', 'dataset');
 	}
 
+	onClickGithub(){		
+		Analytics('intro', 'github');
+	}
+
 	onClickBy(){
-		Analytics('intro', 'nby');
+		Analytics('intro', 'by');
 	}
 
 	render() {
@@ -96,14 +100,14 @@ export class Intro extends Component {
 
 						<div>
 							<p className="by">
-								Contact: <a href="mailto:gar@lonelydatum.com">Gar Liu</a>
+								Made by: <a onClick={this.onClickBy} href="http://lonelydatum.com" target="_blank">Gar Liu</a>
 							</p>
 							
 							<p>
 								Dataset: <a onClick={this.onClickDataset} href="http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=7daf4d8e69770310VgnVCM1000003dd60f89RCRD" target="_blank">Toronto.ca</a>
 							</p>
 							<p>
-								Github: <a href="https://github.com/lonelydatum/toronto-budget---capital-spending" target="_blank">Fork this project</a>
+								Github: <a onClick={this.onClickGithub} href="https://github.com/lonelydatum/toronto-budget---capital-spending" target="_blank">Fork this project</a>
 							</p>
 						</div>
 					</footer>
