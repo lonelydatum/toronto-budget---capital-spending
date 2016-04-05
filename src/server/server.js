@@ -57,7 +57,15 @@ function renderFullPage(html, initialState) {
     <meta property="og:title"         content="A visualization of Toronto's Capital Budget" />
     <meta property="og:description"   content="A visualization of Toronto's Capital Budget" />
     <meta property="og:image"         content="http://toronto-capital-budget.lonelydatum.com/toronto-capital-budget-700x400.png" />
-  
+    
+    <meta name="twitter:card" content="A visualization of Toronto's Capital Budget">
+    <meta name="twitter:site" content="@lonelydatum">
+    <meta name="twitter:title" content="A visualization of Toronto's Capital Budget">
+    <meta name="twitter:description" content="Visualization of Toronto's Capital Budget, 2014-2023 #TOpoli #Toronto http://toronto-capital-budget.lonelydatum.com/ via @lonelydatum">
+    <meta name="twitter:creator" content="@lonelydatum">
+    <meta name="twitter:image:src" content="http://toronto-capital-budget.lonelydatum.com/toronto-capital-budget-700x400.png">
+    <meta name="twitter:domain" content="http://toronto-capital-budget.lonelydatum.com">
+    
   <style>    
     body{
       opacity: 0;
