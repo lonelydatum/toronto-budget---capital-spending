@@ -7,11 +7,9 @@ import * as type from '../constants/ActionTypes'
 
 let data = []
 if (process.env.BROWSER) {
-  data = budget_data  
-  console.log("browser");
+  data = budget_data    
 }else{
-  data = require('../data/budget_clean.json')
-  console.log("server");
+  data = require('../data/budget_clean.json')  
 }
 
 

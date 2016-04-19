@@ -3,7 +3,8 @@ import Map from '../components/map/Map'
 import {toggleWard} from '../actions/index'
 
 
-let introOnce = true
+// let introOnce = true
+let menuFalseCounter = 0
 
 const show = (wards) => {
 	return wards.filter((w) => {
@@ -20,19 +21,19 @@ const mapStateToProps = (state)=>{
 		}	
 	}
 
-	let showIntro = false
+	// let showIntro = false
 
-
-	if(state.intro.closeCount===1 && introOnce){
-		showIntro = true;
-		introOnce = false;
+	
+	if(!state.menu){
+		menuFalseCounter++
 	}
 
 	
 	
 	
 	return {
-		showIntro: showIntro,
+		menu: state.menu,
+		menuFalseCounter: menuFalseCounter,
 		moreInfo: state.moreInfo,
 		selectedID: selectedID,
 		wards_show: show(state.wards),

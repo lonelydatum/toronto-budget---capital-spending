@@ -48,16 +48,16 @@ function renderFullPage(html, initialState) {
     <!doctype html>
 <html>
  <head>
-    <title>Toronto Capital Budget</title>
+   <title>Toronto's Capital Budget</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="keywords" content="Visualization, Toronto Capital Budget, lonelydatum, Gar Liu">
     <meta name="description" content="A visualization of Toronto's Capital Budget. Explore by projects within wards from 2014-2023.">
     <meta property="og:url"           content="http://toronto-capital-budget.lonelydatum.com" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="A visualization of Toronto's Capital Budget" />
-    <meta property="og:description"   content="A visualization of Toronto's Capital Budget" />
+    <meta property="og:description"   content="How do you break up $3.2B?  Visualization of TO's Capital Budget, 2014-2023" />
     <meta property="og:image"         content="http://toronto-capital-budget.lonelydatum.com/toronto-capital-budget-700x400.png" />
-    
+
     <meta name="twitter:card" content="A visualization of Toronto's Capital Budget">
     <meta name="twitter:site" content="@lonelydatum">
     <meta name="twitter:title" content="A visualization of Toronto's Capital Budget">
@@ -65,6 +65,7 @@ function renderFullPage(html, initialState) {
     <meta name="twitter:creator" content="@lonelydatum">
     <meta name="twitter:image:src" content="http://toronto-capital-budget.lonelydatum.com/toronto-capital-budget-700x400.png">
     <meta name="twitter:domain" content="http://toronto-capital-budget.lonelydatum.com">
+  
     
   <style>    
     body{
@@ -76,21 +77,31 @@ function renderFullPage(html, initialState) {
     <link href='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css' rel='stylesheet' />    
   </head>
 <body>
-  <!-- <div id="fb-root"></div> -->
-  <script>
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=223656951010357";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+  <script type="text/javascript">
+    window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '577590222399477',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+
+
+    function fbShare(url, title, descr, image, winWidth, winHeight) {
+        var winTop = (screen.height / 2) - (winHeight / 2);
+        var winLeft = (screen.width / 2) - (winWidth / 2);
+        window.open('http://www.facebook.com/sharer.php?s=100&p[title]=' + title + '&p[summary]=' + descr + '&p[url]=' + url + '&p[images][0]=' + image, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width='+winWidth+',height='+winHeight);
+    }
   </script>
-
-  
-  
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
 
 
   <div id="root">${html}</div>

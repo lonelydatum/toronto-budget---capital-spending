@@ -1,0 +1,55 @@
+@import "../../../../node_modules/breakpoint-sass/stylesheets/_breakpoint.scss";
+@import '../common.scss';
+
+#page-fun{
+	padding-top: 5em;
+	max-width: 900px;
+	// background-color: red;
+
+	display: flex;
+	flex-direction: column;
+	.fact-list{		
+		flex:1;
+		.fact-item{
+			margin-bottom: 3em;
+			a{
+				font-size: 0.7em;
+				padding-left: 0.8em;
+			}
+			h2{
+				font-weight: 400;
+				text-align: center;
+				padding-bottom: 0.4em;
+				text-transform: uppercase;
+				max-width: 70%;
+				margin: 0 auto;
+				@include breakpoint( $screen-large) {
+					
+				}
+			}
+			img{
+				width: 100%;
+			}
+		}
+	}
+	div.description{
+		font-weight: 400;
+		display: flex;
+		// padding-top: .3em;
+		font-size: .8em;
+		line-height: 1.5em;
+		.description-half{
+			padding: .6em;
+			flex:1;
+		}
+	}
+
+	footer{
+		align-self: flex-end;
+		font-size: .8em;
+		padding: 2em;
+		padding-bottom: 1em;
+		text-align: center;
+
+	}
+}

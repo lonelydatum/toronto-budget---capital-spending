@@ -1,0 +1,36 @@
+#page-contact{
+	display: flex;
+	flex-direction: column;
+	.explore{
+		width: 200px;
+	}
+	section{
+		flex:1;
+		align-items: center;
+		justify-content: center;
+		// background-color: red;
+		display: flex;
+		flex-direction: column;
+		.description{
+			text-align: center;
+			margin-top: .7em;
+			max-width: 550px;
+			padding: 0em .9em;
+			line-height: 1.5em;
+			font-size: 1.1em;
+			font-weight: 300;
+		}
+
+		.explore{
+			margin-top: 2em;
+		}
+
+	}
+
+	footer{
+		height: 150px;
+		text-align: center;
+	}
+	
+
+}

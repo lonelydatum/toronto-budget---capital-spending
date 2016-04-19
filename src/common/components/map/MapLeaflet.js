@@ -114,8 +114,6 @@ class MapLeaflet {
 		layer.selected()
 		const center = layer.layer.getBounds().getCenter()
 		center.lng -= .29
-		
-
 		// const b = layer.layer.getBounds()
 		this.map.panTo(center)
 		
@@ -130,7 +128,7 @@ class MapLeaflet {
 		
 	}
 
-	intro(){
+	intro(){		
 		const tl = new TimelineMax()
 		const list = _.orderBy(this.polyList, 'id')		
 		list.forEach( (item) => {	

@@ -11,6 +11,10 @@ export const SORT_BY = 'SORT_BY'
 export const SHOW_HIDE = 'SHOW_HIDE'
 
 export const INTRO_CLOSED = 'INTRO_CLOSED'
+export const MENU_TOGGLE = 'MENU_TOGGLE'
+export const PAGE_SELECTED = 'PAGE_SELECTED'
+
+
 
 
 

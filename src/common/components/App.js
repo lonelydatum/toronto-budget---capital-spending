@@ -3,7 +3,11 @@ import MapConnector from '../containers/MapConnector'
 import HudConnector from '../containers/HudConnector'
 import ContentConnector from '../containers/ContentConnector'
 import MoreInfoConnector from '../containers/MoreInfoConnector'
-import IntroContainer from '../containers/IntroContainer'
+// import IntroContainer from '../containers/IntroContainer'
+import Menu from '../containers/Menu'
+import Page from '../containers/Page'
+
+
 
 if (process.env.BROWSER) {
 	require('./reset.scss')
@@ -18,7 +22,8 @@ class App extends Component {
 		// return(<div></div>)
 		return(
 			<div id="app">
-				<MapConnector />
+			
+		<MapConnector />
 				
 				<div id="panels">
 					<MoreInfoConnector />
@@ -26,8 +31,8 @@ class App extends Component {
 				</div>
 
 				
-				<IntroContainer />
-				
+				<Menu/>
+				<Page/>
 				
 			</div>
 			)
@@ -40,4 +45,4 @@ export default App
 
 
 
-		
+		// 		

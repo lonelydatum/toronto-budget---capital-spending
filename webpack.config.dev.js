@@ -2,10 +2,11 @@ var path = require('path')
 var webpack = require('webpack')
 
 
-
+// new webpack.NoErrorsPlugin(),
+//     new webpack.optimize.DedupePlugin(),
 
 module.exports = {
-  devtool: '#inline-source-map',
+  devtool: 'cheap-module-eval-source-map',
   entry: [
     'webpack-hot-middleware/client',
     './src/client/index.js'
@@ -17,9 +18,7 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),    
-    new webpack.NoErrorsPlugin(),
-    new webpack.optimize.DedupePlugin(),
+    new webpack.HotModuleReplacementPlugin(),        
     new webpack.DefinePlugin({
         "process.env": {
             BROWSER: JSON.stringify(true)

@@ -25,11 +25,13 @@ class Map extends Component{
 	}
 
 	render(){
+		
+		
 		if(this.map){
 			// 
-			if(this.props.showIntro){
+			if(this.props.menuFalseCounter===2){
 				this.map.intro()
-			}else{
+			}else if(this.props.menuFalseCounter>=2 && !this.props.menu){
 				this.map.toggle(this.props.wards_all)
 			}
 

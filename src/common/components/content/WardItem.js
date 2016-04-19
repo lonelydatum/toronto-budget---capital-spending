@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames'
 
 import ShowHide from '../common/ShowHide'
-import {ABC} from '../../util/GA'
+import {Analytics} from '../../util/GA'
 
 if (process.env.BROWSER) {
 	require('./wardItem.scss')
@@ -27,7 +27,7 @@ export class WardItemContent extends React.Component {
 		this.setState({open:!this.state.open})
 		this.props.dispatchMoreInfo(!this.state.open)
 		this.props.dispatchShow()
-		ABC('ward-item-moreinfo', this.props.ward.name, this.props.ward.id)
+		Analytics('ward-item-moreinfo', `${this.props.ward.id}: ${this.props.ward.name}`)
 	}
 
 	

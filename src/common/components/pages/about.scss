@@ -1,0 +1,102 @@
+@import "../../../../node_modules/breakpoint-sass/stylesheets/_breakpoint.scss";
+@import '../common.scss';
+
+#page-about{
+	
+	display:flex;
+	flex-direction: column;
+	
+	section{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex:1;
+		// border:1px solid green;
+		justify-content: center;
+	}
+
+	.description{
+		text-align: center;
+		margin-top: .7em;
+		max-width: 550px;
+		padding: 0em .9em;
+		line-height: 1.5em;
+		font-size: 1.1em;
+		font-weight: 300;
+	}
+
+	
+
+	.description p.learnmore{
+		padding-top: 2em;
+		padding-bottom: .5em;
+		font-size: 77%;
+		color: #26596A;
+	}
+
+	.title{		
+		font-size: 1.9em;
+		
+		margin-bottom: 0em;
+		padding-bottom: 2px;
+		
+		text-align: center;
+		display: flex;
+		
+
+		border-bottom: 1px solid white;
+		
+		align-items: baseline;
+		@include breakpoint( $screen-large) {
+			font-size: 1.9em;
+			padding-left: 2em;
+			padding-right: 2em;
+		}
+		span.year{
+			font-size: 50%;
+			padding-left: .5em;
+		}
+	}
+
+	.btn{
+		width: 200px;
+		cursor: pointer;
+		.label{
+			font-size: 1em;
+		}		
+	}
+
+	footer{		
+		text-align: center;
+		height: 130px;
+	}
+
+	.social{
+		display: flex;
+		justify-content: center;
+	}
+
+	.social img{
+		height:28px;
+	}
+
+	
+}
+
+
+
+.social-item{
+	position: relative;
+	width: 50px;
+	height: 40px;
+}
+
+
+.social-item > div{
+	position: absolute;
+}
+
+.social-item img{
+      padding:5px;      
+      position: relative;
+  }

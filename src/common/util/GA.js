@@ -8,7 +8,7 @@ export const Filter = (value) => {
 
 
 export const Analytics = (a, b) => {
-	// console.log(a, b);
+	console.log(a, b);
 	ga('send', 'event', 'capital-budget', a, b);
 }
 

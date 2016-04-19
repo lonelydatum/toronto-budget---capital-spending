@@ -31,7 +31,8 @@ class WardItem {
 
 	onClicked(e){
 		this.onClickPolygon( this.id )
-		Analytics('map-toggle', this.id )
+		console.log(this);
+		Analytics('map-toggle', `${this.id}: ${this.layer.feature.ward.name}` )
 	}
 
 	toggle(showHide){

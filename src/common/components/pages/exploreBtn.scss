@@ -1,0 +1,14 @@
+.hover-btn{
+	background-color: blue;
+	.highlight{
+		background-color: #26596A;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top:0;
+		opacity: 1;
+		left:-100%;
+		transition: .25s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+		z-index: 0;
+	}
+}
