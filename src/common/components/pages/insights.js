@@ -30,14 +30,14 @@ export default class PageFun extends Component {
 						</div>					
 					</div>
 					<div className="fact-item">
-						<h2>Taxes collected for Rosedale in 2014</h2>
+						<h2>Taxes collected for Rosedale in 2015</h2>
 						<img src="fun/story1/rosedale_taxes.jpg" />
 						<div className="description">
 							<p className="description-half">
 								ROSEDALE (ward 28) pays $76 million in resisential taxes
 							</p>													
 							<p className="description-half">
-								ROSEDALE (ward 28) pays $289 million in comercial taxes
+								ROSEDALE (ward 28) pays $289 million in commercial taxes
 							</p>
 						</div>		
 						<a target="_blank" href="http://www.metronews.ca/news/toronto/2015/04/20/whos-paying-for-toronto-a-ward-by-ward-breakdown-of-property-taxes-in-toronto.html">souce from metronews.ca</a>
