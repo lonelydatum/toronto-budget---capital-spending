@@ -18,14 +18,14 @@ export default class PageFun extends Component {
 				
 				<div className="fact-list">
 					<div className="fact-item">
-						<h2>Capital spending for Rosedale in 2014</h2>
+						<h2>Capital spending for Rosedale in 2015</h2>
 						<img src="fun/story1/rosedale__other.jpg" />
 						<div className="description">
 							<p className="description-half">
-								ROSEDALE (ward 28) recieved $31,785,500 during 2014.
+								ROSEDALE (ward 28) recieved $56,464,500 during 2015.
 							</p>													
 							<p className="description-half">
-								The following 28 wards recieved $30,381,000 during 2014.					
+								The following 38 wards recieved $59,898,000 during 2015.					
 							</p>
 						</div>					
 					</div>
