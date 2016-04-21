@@ -70,6 +70,7 @@ function renderFullPage(html, initialState) {
   <style>    
     body{
       opacity: 0;
+      background-color: #D6513D;
     }
   </style>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,800' rel='stylesheet' type='text/css'>
