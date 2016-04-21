@@ -26,32 +26,6 @@ const tile3 = {
 	}
 }
 
-// L.mapbox.accessToken = 'pk.eyJ1IjoibG9uZWx5ZGF0dW0iLCJhIjoid3lTeDFGZyJ9.UeyA15GlHrIH04r93f-2GA';
-// const tile4 = {
-// 	url: 'https://api.mapbox.com/styles/v1/mapbox/emerald-v8/tiles/{z}/{x}/{y}?access_token=' + L.mapbox.accessToken,
-// 	options:  {
-			
-// 	}
-// }
-
-
-// L.mapbox.accessToken = 'pk.eyJ1IjoibG9uZWx5ZGF0dW0iLCJhIjoid3lTeDFGZyJ9.UeyA15GlHrIH04r93f-2GA';
-// const tile5 = {
-// 	url: 'https://api.mapbox.com/styles/v1/mapbox/emerald-v8/tiles/{z}/{x}/{y}?access_token=' + L.mapbox.accessToken,
-// 	options:  {
-			
-// 	}
-// }
-
-
-
-// L.tileLayer(
-//     , {
-//         tileSize: 512,
-//         zoomOffset: -1,
-//         attribution: '© <a href="https://www.mapbox.com/map-feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-//     }).addTo(map);
-
 
 
 class MapLeaflet {
@@ -63,7 +37,7 @@ class MapLeaflet {
 
 	load(){
 		L.mapbox.accessToken = 'pk.eyJ1IjoibG9uZWx5ZGF0dW0iLCJhIjoid3lTeDFGZyJ9.UeyA15GlHrIH04r93f-2GA';
-		this.map = L.mapbox.map('map').addLayer(L.mapbox.tileLayer('mapbox.streets'));
+		this.map = L.mapbox.map('map').addLayer(L.mapbox.tileLayer('mapbox.light'));
 
 
 
