@@ -8,7 +8,7 @@
     "react-redux": "^4.4.1"
   },
   "scripts": {
-    "start": "node src/server/index.js",    
+    "start": "node src/server/index.js",
     "bundle:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "dev": "node src/dev/index.js",
     "server": "node src/server/index.js"
@@ -28,6 +28,7 @@
     "css-loader": "^0.23.1",
     "express": "^4.13.4",
     "file-loader": "^0.8.5",
+    "ismobilejs": "^0.4.0",
     "json-loader": "^0.5.4",
     "lodash": "^4.6.1",
     "node-sass": "^3.4.2",

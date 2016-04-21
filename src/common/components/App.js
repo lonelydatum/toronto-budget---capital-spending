@@ -9,32 +9,70 @@ import Page from '../containers/Page'
 
 
 
+
+
 if (process.env.BROWSER) {
 	require('./reset.scss')
 	require('./app.scss')
+	
 }
 
 
 
 
 class App extends Component {
+
+
 	render(){
-		// return(<div></div>)
-		return(
-			<div id="app">
-			
-		<MapConnector />
+		let yesNoMobile
+
+
+		
+		const notMobile = (
+		<div id="app">				
+				<MapConnector />				
+				<div id="panels">
+					<MoreInfoConnector />
+					<ContentConnector />					
+				</div>
+				<Menu/>
+				<Page/>				
+			</div>)
+
+
+		const isMobile = (
+		<div id="app">				
 				
 				<div id="panels">
 					<MoreInfoConnector />
 					<ContentConnector />					
 				</div>
-
-				
 				<Menu/>
-				<Page/>
-				
-			</div>
+				<Page/>				
+			</div>)
+
+
+		let width = 0;
+		if (process.env.BROWSER) {
+			width = window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth||0;
+			
+		}
+
+
+		if(width>700){
+			yesNoMobile = notMobile
+		}else{
+			yesNoMobile = isMobile
+		}
+
+
+
+		// const yesNoMobile = (isMobile) ? isMobile : notMobile
+
+		console.log("__________ ",width);
+
+		return(
+			yesNoMobile
 			)
 	}
 }

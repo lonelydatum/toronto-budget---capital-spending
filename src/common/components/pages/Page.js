@@ -36,7 +36,7 @@ export default class Page extends Component {
 
 		
 
-		TweenMax.delayedCall( 1, this.props.menuToggle )
+		TweenMax.delayedCall( 2, this.props.menuToggle )
 		// this.checkOpenClose()
 	}
 
@@ -66,7 +66,7 @@ export default class Page extends Component {
 		
 		const r = `rect(0px, ${this.wh().w}px, ${this.wh().h}px, ${this.wh().w}px)`;		
 		TweenMax.set("#page", {clip:`rect(0px, ${this.wh().w}px, ${this.wh().h}px, 0px)`})
-		TweenMax.to("#page", 1, {clip:r, onComplete:()=>{
+		TweenMax.to("#page", 1, {ease:Quad.easeOut, clip:r, onComplete:()=>{
 			TweenMax.set("#page", {display:'none'})
 		}})
 	}
@@ -76,7 +76,7 @@ export default class Page extends Component {
 
 		const r = `rect(0px, ${this.wh().w}px, ${this.wh().h}px, ${this.wh().w}px)`;
 		TweenMax.set("#page", {clip:r, display:'block'})
-		TweenMax.to("#page", 1, {clip:`rect(0px, ${this.wh().w}px, ${this.wh().h}px, 0px)`, onComplete:()=>{
+		TweenMax.to("#page", 1, {ease:Quad.easeOut, clip:`rect(0px, ${this.wh().w}px, ${this.wh().h}px, 0px)`, onComplete:()=>{
 			// TweenMax.to("#page",1, {clip:'auto'})
 			document.getElementById('page').style.clip = 'auto';
 			// if(this.refs.page){
@@ -112,7 +112,7 @@ export default class Page extends Component {
 		
 		this.checkOpenClose()
 		
-		console.log(isMounted);
+		
 		
 		const cssPage = classnames({isOpen:this.props.isOpen})
 		const cssNavAbout = classnames({navItemSelected:this.props.page==='ABOUT'})

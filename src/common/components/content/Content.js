@@ -20,15 +20,16 @@ class Content extends Component{
 
 	constructor() {
 		super()
-		this.state = {show:true, showHideAll:true}
+		this.state = {showHideAll:true}
 	}
 
 	componentDidMount() {
-		
+		// console.log("_______");
+		// TweenLite.from("#content", 10, {x:-800})
 	}
 
 	onOpenClose() {
-		this.setState({show:!this.state.show})
+		// this.setState({show:!this.state.show})
 	}
 
 	onShowHideAll() {
@@ -44,8 +45,8 @@ class Content extends Component{
 
 	render(){
 		const {years, grandtotal, wards, decadeList, decadeTotal} = this.props
-		const showHideText = this.state.show ? "HIDE" : "SHOW"
-		const contentClass = classnames('panel', {hide:!this.state.show})
+		// const showHideText = this.state.show ? "HIDE" : "SHOW"
+		const contentClass = classnames('panel')
 		
 		let title = `Toronto will spend $${grandtotal.money()} `
 
