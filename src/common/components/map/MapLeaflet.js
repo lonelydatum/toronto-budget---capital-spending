@@ -5,31 +5,6 @@ import _ from 'lodash'
 
 
 
-// import './leaflet.scss'
-// import './leaflet.label.js'
-
-// const tile = {
-// 	url: 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw',
-// 	options: {
-// 		maxZoom: 18,			
-// 		id: 'mapbox.light'
-// 	}
-// }
-
-// const tile2 = {
-// 	url: 'https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png',
-// 	options:  {
-// 			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
-// 	}
-// }
-
-// const tile3 = {
-// 	url: 'https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png',
-// 	options:  {
-// 			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
-// 	}
-// }
-
 
 
 class MapLeaflet {
@@ -64,9 +39,8 @@ class MapLeaflet {
 
 	
 
-	geoJson(){				
-		
-		let wardGeojson = require( '../../data/ward-geojson.json' )				
+	geoJson(){						
+		// let wardGeojson = require( '../../data/ward-geojson.json' )				
 		const poly = L.geoJson(wardGeojson, {			
 			onEachFeature: (feature, layer)=>{
 				const wardItem = new WardItem(feature.ward.id, layer, this.onClickPolygon)
