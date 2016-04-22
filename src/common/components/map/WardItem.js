@@ -18,7 +18,7 @@ class WardItem {
 		
 		this.style = {
 			show: {fillOpacity:.8},
-			hide: {fillOpacity:.3},
+			hide: {fillOpacity:.2, fillColor:'#ef4f34'},
 			selected: {fillColor:col.darkblue, weight:2},
 			common: {weight:1.5, fillColor:'#ef4f34', color:'brown'}
 		}
@@ -31,13 +31,14 @@ class WardItem {
 
 	onClicked(e){
 		this.onClickPolygon( this.id )
-		console.log(this);
 		Analytics('map-toggle', `${this.id}: ${this.layer.feature.ward.name}` )
 	}
 
 	toggle(showHide){
 		const sh = showHide ? this.style.show : this.style.hide;
-		this.layer.setStyle( {...this.style.common, ...sh} )
+		const newOBJ = {...this.style.common, ...sh}
+		// console.log(newOBJ);
+		this.layer.setStyle( newOBJ )
 	}
 
 	selected(){

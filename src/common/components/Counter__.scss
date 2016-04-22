@@ -1,0 +1,37 @@
+html{
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100%;
+	margin: 0;
+	opacity: 1;
+}
+
+.counter{
+	display: flex;
+	width: 300px;
+	flex-direction: column;
+	h1{
+		color: gold;
+		align-self: center;
+	}
+	button{
+		border: 2px solid black;
+		background-color: white;
+		color: gold;
+		font-size: 2em;
+		cursor: pointer;
+		padding: .3em;
+		margin-bottom: 2em;
+	}
+	button:hover{
+		background-color: grey;
+	}
+
+
+} 

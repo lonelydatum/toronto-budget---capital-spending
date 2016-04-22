@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import wardGeojson from './map.json'
+// import wardGeojson from './map.json'
 import MapLibrary from './MapLeaflet'
 
 if (process.env.BROWSER) {
@@ -18,7 +18,7 @@ class Map extends Component{
 	}
 
 	componentDidMount() {
-		this.map = new MapLibrary( wardGeojson, this.props.onClickPolygon )
+		this.map = new MapLibrary( this.props.onClickPolygon )
 		this.map.load().then( (n)=>{
 			
 		} )

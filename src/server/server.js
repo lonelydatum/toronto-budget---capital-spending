@@ -122,6 +122,7 @@ function renderFullPage(html, initialState) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TimelineMax.min.js"></script>
 <script src="./budget_data_min.js"></script>
+<script src="./ward-geojson.js"></script>
 <script src="./bundle.js"></script>
 
 <script>

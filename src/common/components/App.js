@@ -41,14 +41,13 @@ class App extends Component {
 
 
 		const isMobile = (
-		<div id="app">				
-				
+			<div id="app">
 				<div id="panels">
 					<MoreInfoConnector />
-					<ContentConnector />					
+					<ContentConnector />
 				</div>
 				<Menu/>
-				<Page/>				
+				<Page/>
 			</div>)
 
 
@@ -69,7 +68,7 @@ class App extends Component {
 
 		// const yesNoMobile = (isMobile) ? isMobile : notMobile
 
-		console.log("__________ ",width);
+		// console.log("__________ ",width);
 
 		return(
 			yesNoMobile
