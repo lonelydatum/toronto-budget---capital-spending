@@ -17,4 +17,10 @@ body{
 	@include breakpoint( $screen-med) {
 		 display: block;
 	}
+
+	.leaflet-ward-label{
+		color:rgba(255,255,255,.4);
+		font-family: 'Open Sans';
+		pointer-events: none;
+	}
 }

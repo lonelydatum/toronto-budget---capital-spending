@@ -37,8 +37,17 @@ class WardItem {
 	toggle(showHide){
 		const sh = showHide ? this.style.show : this.style.hide;
 		const newOBJ = {...this.style.common, ...sh}
-		// console.log(newOBJ);
 		this.layer.setStyle( newOBJ )
+
+		const el = document.querySelector('.leaflet-marker-icon.leaflet-ward-label.ward'+this.id)
+		if(!el){
+			return;
+		}
+		if(!showHide){			
+			el.style.color = 'salmon';			
+		}else{
+			el.style.color = 'rgba(255,255,255,.4)';
+		}
 	}
 
 	selected(){

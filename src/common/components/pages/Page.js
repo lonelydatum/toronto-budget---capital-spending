@@ -36,7 +36,7 @@ export default class Page extends Component {
 
 		
 
-		TweenMax.delayedCall( 2, this.props.menuToggle )
+		TweenMax.delayedCall( 1.3, this.props.menuToggle )
 		// this.checkOpenClose()
 	}
 
